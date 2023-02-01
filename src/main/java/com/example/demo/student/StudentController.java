@@ -4,6 +4,8 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -17,7 +19,14 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
-
+    @GetMapping(value = "/getfile")
+    public List<HashMap<String,Object>> getfiles() {
+    	HashMap<String,Object> map = new HashMap<>();
+    	map.put("hellooo","world");
+    	List<HashMap<String,Object>> list= new ArrayList();
+    	list.add(map);
+         return list;
+    }
     @GetMapping(value = "")
     public List<Student> getStudents() {
         List<Student> list = studentService.getStudents();
