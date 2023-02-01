@@ -7,8 +7,8 @@ pipeline {
             }
 			post {
                success {
-					archiveArtifacts artifacts: '**/target/demo-v1.jar'
-					stash includes: '**/target/dmeo-V1.jar', name: 'apijar' 
+					archiveArtifacts artifacts: '**/target/demo-0.0.1-SNAPSHOT.jar'
+					stash includes: '**/target/demo-0.0.1-SNAPSHOT.jar', name: 'demo-0.0.1-SNAPSHOT' 
                    }
               }
         }
