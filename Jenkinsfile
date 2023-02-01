@@ -7,8 +7,8 @@ pipeline {
             }
 			post {
                success {
-					archiveArtifacts artifacts: '**/target/demo-0.0.1-SNAPSHOT.jar'
-					stash includes: '**/target/demo-0.0.1-SNAPSHOT.jar', name: 'demo-0.0.1-SNAPSHOT' 
+					archiveArtifacts artifacts: '**/target/demo-0.0.1-SNAPSHOT.war'
+					stash includes: '**/target/demo-0.0.1-SNAPSHOT.war', name: 'demo-0.0.1-SNAPSHOT' 
                    }
               }
         }
