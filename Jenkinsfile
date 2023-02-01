@@ -17,12 +17,4 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        
-        stage('Approval') {
-            steps {     
-                    input('Do you want to proceed?')
-				}
-			}
-       
-        }
 	}
